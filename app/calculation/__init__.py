@@ -249,12 +249,13 @@ class DivideCalculation(Calculation):
 @CalculationFactory.register_calculation('power')
 class PowerCalculation(Calculation):
     """
-    MultiplyCalculation represents a multiplication operation.
-    
-    By encapsulating the multiplication logic here, we achieve a clear separation of 
-    concerns, making it easy to adjust the multiplication logic without affecting other calculations.
+    PowerCalculation represents exponentiation between two numbers.
+
+    The first operand is used as the base and the second operand is used as the
+    exponent. Keeping this operation in its own class preserves the same factory
+    and polymorphic `execute` interface used by the other calculation types.
     """
 
     def execute(self) -> float:
-        # Calls the multiplication method from the Operation module to perform the multiplication.
+        # Delegate exponentiation to Operation so arithmetic stays centralized.
         return Operation.power(self.a, self.b) # pragma: no cover

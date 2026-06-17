@@ -1,6 +1,6 @@
 """
 This module provides a professional-grade calculator that can add, subtract,
-multiply, and divide numbers based on user input. It leverages the Calculation
+multiply, divide, and exponentiate numbers based on user input. It leverages the Calculation
 classes for operations and includes additional features like help commands and
 history tracking to enhance user experience.
 
@@ -20,7 +20,10 @@ from app.calculation import Calculation, CalculationFactory
 
 def display_help() -> None:
     """
-    Displays the help message with usage instructions and supported operations.
+    Display REPL syntax, supported operations, and special commands.
+
+    The text is intentionally kept in one place so the interactive `help`
+    command and its test expectation can stay synchronized.
     """
     help_message = """
 Calculator REPL Help
@@ -33,6 +36,7 @@ Usage:
         subtract  : Subtracts the second number from the first.
         multiply  : Multiplies two numbers.
         divide    : Divides the first number by the second.
+        power     : Raises the first number to the power of the second.
 
 Special Commands:
     help      : Display this help message.
@@ -44,6 +48,7 @@ Examples:
     subtract 15.5 3.2
     multiply 7 8
     divide 20 4
+    power 2 3
     """
     print(help_message)
 
@@ -66,7 +71,7 @@ def display_history(history: List[Calculation]) -> None:
 def calculator() -> None:
     """
     Professional REPL calculator that performs addition, subtraction,
-    multiplication, and division using Calculation classes.
+    multiplication, division, and exponentiation using Calculation classes.
 
     This function demonstrates both LBYL and EAFP programming paradigms.
     """

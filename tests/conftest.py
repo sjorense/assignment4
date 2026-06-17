@@ -7,7 +7,7 @@ from app.calculation import (
     SubtractCalculation,
     MultiplyCalculation,
     DivideCalculation,
-    
+    PowerCalculation,
 )
 
 @pytest.fixture(autouse=True)
@@ -23,3 +23,4 @@ def reset_calculation_factory():
     CalculationFactory.register_calculation('subtract')(SubtractCalculation)
     CalculationFactory.register_calculation('multiply')(MultiplyCalculation)
     CalculationFactory.register_calculation('divide')(DivideCalculation)
+    CalculationFactory.register_calculation('power')(PowerCalculation)

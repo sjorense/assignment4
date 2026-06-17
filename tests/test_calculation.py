@@ -260,8 +260,8 @@ def test_factory_creates_subtract_calculation():
     class when the 'subtract' calculation type is requested.
     """
     # Arrange
-    a = 10.0
-    b = 5.0
+    a = 8.0
+    b = 4.0
 
     # Act
     calc = CalculationFactory.create_calculation('subtract', a, b)
@@ -280,8 +280,8 @@ def test_factory_creates_multiply_calculation():
     class when the 'multiply' calculation type is requested.
     """
     # Arrange
-    a = 10.0
-    b = 5.0
+    a = 8.0
+    b = 4.0
 
     # Act
     calc = CalculationFactory.create_calculation('multiply', a, b)
@@ -300,8 +300,8 @@ def test_factory_creates_divide_calculation():
     class when the 'divide' calculation type is requested.
     """
     # Arrange
-    a = 10.0
-    b = 5.0
+    a = 8.0
+    b = 4.0
 
     # Act
     calc = CalculationFactory.create_calculation('divide', a, b)
@@ -320,8 +320,8 @@ def test_factory_create_unsupported_calculation():
     results in a ValueError with an appropriate error message.
     """
     # Arrange
-    a = 10.0
-    b = 5.0
+    a = 8.0
+    b = 4.0
     unsupported_type = 'modulus'  # An unsupported calculation type
 
     # Act & Assert
@@ -366,8 +366,8 @@ def test_calculation_str_representation_addition(mock_addition):
     is formatted correctly, displaying the class name, operation, operands, and result.
     """
     # Arrange
-    a = 10.0
-    b = 5.0
+    a = 8.0
+    b = 4.0
     add_calc = AddCalculation(a, b)
 
     # Act
@@ -388,8 +388,8 @@ def test_calculation_str_representation_subtraction(mock_subtraction):
     is formatted correctly, displaying the class name, operation, operands, and result.
     """
     # Arrange
-    a = 10.0
-    b = 5.0
+    a = 8.0
+    b = 4.0
     subtract_calc = SubtractCalculation(a, b)
 
     # Act
