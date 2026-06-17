@@ -44,11 +44,11 @@ Special Commands:
     exit      : Exit the calculator.
 
 Examples:
-    add 9 10
-    subtract 10.5 5.2
-    multiply 3 8
-    divide 20 5
-    power 4 2
+    add 10 5
+    subtract 15.5 3.2
+    multiply 7 8
+    divide 20 4
+    power 2 3
     """
     print(help_message)
 
@@ -107,7 +107,7 @@ def calculator() -> None:
                 display_history(history)
                 continue
             elif command == "exit":
-                print("Exiting calculator. See you later!\n")
+                print("Exiting calculator. Goodbye!\n")
                 sys.exit(0)  # Exit the program gracefully
 
             # EAFP (Easier to Ask Forgiveness than Permission)
